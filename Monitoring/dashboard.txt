@@ -1,0 +1,1 @@
+Security dashboard includes: Threat Summary, Secure Score, Active Alerts, Log Volume.

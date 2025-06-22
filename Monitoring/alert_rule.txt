@@ -1,0 +1,1 @@
+Alert rule: CPU > 80% for 5 mins triggers email to SecOps
