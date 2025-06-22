@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.36.1.42791",
+      "templateHash": "18349775748161818590"
+    }
+  },
+  "parameters": {
+    "firewallName": {
+      "type": "string",
+      "defaultValue": "SecureBastion-Firewall"
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]"
+    },
+    "vnetName": {
+      "type": "string",
+      "defaultValue": "SecureBastion-VNet"
+    },
+    "subnetName": {
+      "type": "string",
+      "defaultValue": "AzureFirewallSubnet"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/azureFirewalls",
+      "apiVersion": "2022-09-01",
+      "name": "[parameters('firewallName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "sku": {
+          "name": "AZFW_VNet",
+          "tier": "Standard"
+        },
+        "ipConfigurations": [
+          {
+            "name": "fw-ipconfig",
+            "properties": {
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('vnetName'), parameters('subnetName'))]"
+              },
+              "publicIPAddress": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
