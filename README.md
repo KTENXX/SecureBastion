@@ -1,45 +1,75 @@
-# 🔐 SecureBastion: Azure Security Architecture Simulation
+# 🛡️ SecureBastion — Azure Security Architecture Simulation
 
-SecureBastion is a personal, hands-on simulation project designed to emulate real-world Azure cloud security architecture practices. It replicates a multi-phase security strategy covering critical areas of Azure infrastructure defense, using CLI, Bicep templates, and markdown documentation — all without requiring a paid subscription or portal access.
-
-> **Goal:** To demonstrate practical understanding of cloud security design, implementation, and monitoring in Microsoft Azure — aligned with AZ-500 exam domains.
-
----
-
-## 🚀 Project Objectives
-
-- Simulate and reinforce security best practices in an Azure environment.
-- Showcase key concepts in network, identity, data, threat, and monitoring security.
-- Create a practical GitHub portfolio project for recruiters and interviewers.
-- Gain command-line and IaC fluency (Azure CLI + Bicep) without portal dependency.
+**Status:** ✅ Completed | **Year:** 2025  
+**Author:** [0dayshinobi](https://github.com/KTENXX)  
+**Project Type:** Personal Cloud Security Architecture Lab  
+**Cloud Provider:** Microsoft Azure  
+**Tools & Language:** Bicep, Bash, VS Code, Azure CLI (No Portal, No Paid Subscription)
 
 ---
 
-## 🧱 Architecture Overview
+## 🎯 Objective
 
-The project is divided into **7 key phases**, each representing a core component of Azure cloud security:
-
-| Phase | Domain | Description |
-|-------|--------|-------------|
-| 1 | **Platform Protection** | Simulated NSGs and Azure Firewall rules via Bicep templates. |
-| 2 | **Identity & Access Management** | Role-based access, identity simulation, and RBAC policy mapping. |
-| 3 | **Admin Access** | Just-In-Time (JIT) access setup using Bicep and CLI commands. |
-| 4 | **Data Protection** | Simulated encryption, key vault usage, and mock DLP alert generation. |
-| 5 | **Security Posture Management** | Defender for Cloud simulation, secure score insights, and baseline review. |
-| 6 | **Monitoring & Logging** | Diagnostic settings, alert rules, and custom dashboards (simulated). |
-| 7 | **Threat Protection & Response** | Mapped MITRE ATT&CK tactics and simulated playbooks + alert responses. |
+SecureBastion is an end-to-end simulation of a hardened Azure security architecture based on AZ-500 exam objectives. The project showcases practical implementation of security controls using CLI and markdown documentation — no portal, no UI, no shortcuts.
 
 ---
 
-## 🛠️ Tools & Technologies
+## 📁 Project Phases
 
-- **Azure CLI** – All resources deployed via terminal commands.
-- **Bicep** – Infrastructure-as-Code templates for NSG, firewall, and JIT.
-- **Markdown** – In-depth documentation and phase simulations.
-- **Git** – Version control with clean commit history per phase.
-- **Linux (Ubuntu)** – Fully executed in CLI without Azure Portal access.
+### ✅ Phase 1: Identity & Access Management
+- Simulated RBAC roles, custom assignments, and Azure AD configurations.
+- Demonstrated least-privilege enforcement using Bicep templates.
+
+### ✅ Phase 2: Admin Access Control
+- Configured Just-In-Time (JIT) access for Azure VMs using Azure CLI.
+- Designed a Bastion access simulation to enforce secure remote access.
+
+### ✅ Phase 3: Platform Protection
+- Defined Network Security Groups (NSGs), subnet-level policies, and simulated firewall rules.
+- Created misconfigurations intentionally and documented remediation paths.
+
+### ✅ Phase 4: Data Protection
+- Simulated encryption at rest and in transit.
+- Used Key Vault-like references and fake credentials to simulate key management and DLP alerts.
+
+### ✅ Phase 5: Threat Protection
+- Mapped attack simulations to MITRE ATT&CK tactics.
+- Logged events and wrote mock remediation plans for each alert type.
+
+### ✅ Phase 6: Security Posture Management
+- Simulated Defender for Cloud onboarding and secure score changes.
+- Documented compliance issues and resolved fake policy alerts.
+
+### ✅ Phase 7: Monitoring & Logging
+- Enabled diagnostic settings via CLI for simulated services.
+- Created alert rules and forwarded logs to a mock Log Analytics workspace.
+
+### ✅ Phase 8: Security Operations (SIEM)
+- Simulated Azure Sentinel detection rules and playbook logic.
+- Wrote markdown-based incident response workflows.
 
 ---
 
-## 📂 Project Structure
+## 🧠 Skills Practiced
 
+- Azure CLI, Bicep, Git, VS Code
+- IAM, RBAC, NSG, Bastion, JIT Access
+- Defender for Cloud, Key Vault, Log Analytics
+- SIEM (Azure Sentinel), MITRE Mapping, DLP Concepts
+- Markdown documentation, Git-based version control
+
+---
+
+## 🗂️ Folder Structure
+
+```bash
+SecureBastion/
+├── IdentityAccess/
+├── AdminAccess/
+├── PlatformProtection/
+├── DataProtection/
+├── ThreatProtection/
+├── SecurityPosture/
+├── Monitoring/
+├── SecurityOperations/
+└── README.md
