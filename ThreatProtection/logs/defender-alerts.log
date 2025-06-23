@@ -1,0 +1,12 @@
+[ALERT] Microsoft Defender for Cloud detected:
+Threat Type: SSH Brute Force
+Severity: High
+Time Detected: 2025-06-22 08:43 UTC
+Source IP: 185.22.63.11
+Target VM: secure-bastion-vm01
+Region: West Europe
+Recommended Action: 
+- Block source IP using NSG
+- Enable just-in-time (JIT) VM access
+- Reset admin credentials
+- Review sign-in logs for anomalous patterns
