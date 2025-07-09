@@ -1,7 +1,7 @@
 # 🛡️ SecureBastion — Azure Security Architecture Simulation
 
 **Status:** ✅ Completed | **Year:** 2025  
-**Author:** [0dayshinobi](https://github.com/KTENXX)  
+**Author:** [Kelvin Arigbe](https://github.com/KTENXX)  
 **Project Type:** Personal Cloud Security Architecture Lab  
 **Cloud Provider:** Microsoft Azure  
 **Tools & Language:** Bicep, Bash, VS Code, Azure CLI (No Portal, No Paid Subscription)
